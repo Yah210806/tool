@@ -155,14 +155,14 @@ const ruleProviderCommon = {
     //     "proxies": ["手动切换", "香港节点", "美国节点", "狮城节点", "日本节点", "台湾节点", "DIRECT"],
     //     "icon": "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Game.png"
     //   },
-    //   {
-    //     ...groupBaseOption,
-    //     "name": "Emby",
-    //     "type": "select",
-    //     "include-all": true,
-    //     "proxies": ["手动切换", "香港节点", "美国节点", "狮城节点", "日本节点", "台湾节点", "DIRECT"],
-    //     "icon": "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Emby.png"
-    //   },
+      {
+        ...groupBaseOption,
+        "name": "Emby",
+        "type": "select",
+        "include-all": true,
+        "proxies": ["手动切换", "香港节点", "美国节点", "狮城节点", "日本节点", "台湾节点", "DIRECT"],
+        "icon": "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Emby.png"
+      },
     //   {
     //     ...groupBaseOption,
     //     "name": "Spotify",
@@ -355,10 +355,26 @@ const ruleProviderCommon = {
         "path": "./rules/ProxyGFW.list"
       }
     };
-  
+
+    const customRules = [
+        "DOMAIN,cdn.lyrebirdemby.com,Emby",
+        "DOMAIN,jcf.niceduck.lol,Emby",
+        "DOMAIN,cf.niceduck.lol,Emby",
+        "DOMAIN,vi.niceduck.lol,Emby",
+        "DOMAIN,pilicf.niceduck.lol,Emby",
+        "DOMAIN,dpxcf.niceduck.lol,Emby",
+        "DOMAIN,dpxcdn.niceduck.lol,Emby",
+        "DOMAIN,dpxcdn1.niceduck.lol,Emby",
+        "DOMAIN,cfloacl.emby.moe,Emby",
+        "DOMAIN,cfloacl2.emby.moe,Emby",
+        "DOMAIN,loacl2.emby.moe,Emby",
+        "DOMAIN,loacl.emby.moe,Emby",
+      ];
+
     // 覆盖规则
     config["rules"] = [
       "RULE-SET,AD,REJECT",
+      ...customRules,
       "RULE-SET,AI,AI",
       "RULE-SET,Apple,苹果服务",
       "RULE-SET,YouTube,谷歌服务",
