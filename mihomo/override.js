@@ -357,18 +357,24 @@ const ruleProviderCommon = {
     };
 
     const customRules = [
-        "DOMAIN,cdn.lyrebirdemby.com,Emby",
+        // niceduck
         "DOMAIN,jcf.niceduck.lol,Emby",
         "DOMAIN,cf.niceduck.lol,Emby",
         "DOMAIN,vi.niceduck.lol,Emby",
-        "DOMAIN,pilicf.niceduck.lol,Emby",
         "DOMAIN,dpxcf.niceduck.lol,Emby",
-        "DOMAIN,dpxcdn.niceduck.lol,Emby",
-        "DOMAIN,dpxcdn1.niceduck.lol,Emby",
         "DOMAIN,cfloacl.emby.moe,Emby",
         "DOMAIN,cfloacl2.emby.moe,Emby",
         "DOMAIN,loacl2.emby.moe,Emby",
         "DOMAIN,loacl.emby.moe,Emby",
+        "DOMAIN,iris.niceduck.lol,Emby",
+        "DOMAIN,cf.irisnb.com,Emby",
+        // syn
+        "DOMAIN-SUFFIX,makima.online,DIRECT",
+        "DOMAIN-SUFFIX,clip.synn.cc,DIRECT",
+        // lily
+        "DOMAIN,hk.lilyemby.my,Emby",
+        // bird
+        "DOMAIN,cdn.lyrebirdemby.com,Emby",
       ];
 
     // 覆盖规则
